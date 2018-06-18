@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enext Test</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"/>
+    <link href="assets/css/font/droidsans.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+
+<body>
+<header id="menu">
+    <div class="content-header">
+        <a class="btn-menu" id="btnMenu">
+            <span></span>
+        </a>
+
+        <div class="brand">
+            <h2><span>MERLIN'S</span> POTIONS</h2>
+            <p>--- fine potions since 1026 ---</p>
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Search our stock"/>
+            <a class="btn-search"><i class="fas fa-search"></i></a>
+        </div>
+
+        <div class="free-shipping">
+            <h2>Free shipping <br/> <span>on orders over $50</span></h2>
+        </div>
+
+        <div class="bag">
+            <i class="fas fa-shopping-bag"></i>
+            <h3>BAG: <span>1</span></h3>
+        </div>
+    </div>
+
+    <nav>
+        <div class="content-nav">
+            <ul>
+                <li><a>Potions <i class="fas fa-caret-down"></i></a></li>
+                <li><a>Ingredients <i class="fas fa-caret-down"></i></a></li>
+                <li><a>Books <i class="fas fa-caret-down"></i></a></li>
+                <li><a>Supplies <i class="fas fa-caret-down"></i></a></li>
+                <li><a>Charms <i class="fas fa-caret-down"></i></a></li>
+                <li><a>Clearance!</a></li>
+            </ul>
+
+            <div class="sign">
+                <a>Sign In</a>
+                <span>or</span>
+                <a>Sign Up</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section>
+    <div class="content-section">
+        <h1>Potions</h1>
+        <!--<button id="btnOpenModal" onclick="modal()">MODAL</button>-->
+        <!--<button id="btnOpenModal">MODAL</button>-->
+
+        <div class="all-products" id="allPotions">
+            <!--<a class="each-product">
+                <img src="assets/img/products/aging-potion.png" alt="Potion"/>
+                <h2>Aging Potion - <span>$29.99</span></h2>
+            </a>
+            <a class="each-product">
+                <img src="assets/img/products/aging-potion.png" alt="Potion"/>
+                <h2>Aging Potion - <span>$29.99</span></h2>
+            </a>
+            <a class="each-product">
+                <img src="assets/img/products/aging-potion.png" alt="Potion"/>
+                <h2>Aging Potion - <span>$29.99</span></h2>
+            </a>
+            <a class="each-product">
+                <img src="assets/img/products/aging-potion.png" alt="Potion"/>
+                <h2>Aging Potion - <span>$29.99</span></h2>
+            </a>
+            <a class="each-product">
+                <img src="assets/img/products/aging-potion.png" alt="Potion"/>
+                <h2>Aging Potion - <span>$29.99</span></h2>
+            </a>
+            <a class="each-product">
+                <img src="assets/img/products/aging-potion.png" alt="Potion"/>
+                <h2>Aging Potion - <span>$29.99</span></h2>
+            </a>-->
+        </div>
+    </div>
+</section>
+
+<div class="modal" id="modal">
+    <!--<div class="close-modal" onclick="modal()"></div>-->
+    <div class="close-modal" id="closeModal"></div>
+
+    <div class="content-modal" id="contentModal">
+        <!--<a class="btn-close" onclick="modal()">
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </a>-->
+        <a class="btn-close" id="btnCloseModal">
+            <ul>
+                <li></li>
+                <li></li>
+            </ul>
+        </a>
+
+        <div class="modal-product image-product" id="imageProduct">
+            <!--<img src="assets/img/products/aging-potion.png" alt="Potion" />-->
+        </div>
+
+        <div class="modal-product info-product" id="infoProduct">
+            <h2>Name</h2>
+
+            <h3>Use/Efect</h3>
+            <p>Loading...</p>
+
+            <h3>Ingredients</h3>
+            <p>Loading...</p>
+
+            <h3>Price</h3>
+            <p class="price">Loading...</p>
+
+            <button>ADD TO CART</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="content-footer">
+        <div class="nav-social">
+            <nav>
+                <a>COMPANY</a>
+                <a>CONTACT US</a>
+                <a>SHIPPING</a>
+                <a>RETURNS</a>
+                <a>CARRERS</a>
+            </nav>
+
+            <ul>
+                <li>
+                    <a href="" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" target="_blank">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" target="_blank">
+                        <i class="fab fa-tumblr"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" target="_blank">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <p>© 2018 Merlin's Potions. All Rights Reserved</p>
+        </div>
+
+        <div class="newsletter">
+            <h3>Sign up for our Newsletter</h3>
+            <p>Sign up for our Newsletter & get exclusive discounts!</p>
+            <input type="text" placeholder="Enter your e-mail" />
+            <button>SUBMIT</button>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/functions.js" type="text/javascript"></script>
+</body>
+</html>

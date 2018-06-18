@@ -1,0 +1,186 @@
+.centraliza-xy {
+  position: absolute;
+  max-width: 100%;
+  z-index: 99;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.box-sizing {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.user-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin container($width: 1620px) {
+  width: $width;
+  margin: 0 auto;
+}
+
+@mixin fonte($nome-fonte) {
+  font-family: $nome-fonte;
+}
+
+@mixin fontsize($size: 16, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size/$base) * 1rem;
+}
+
+@mixin imagem-background($float: none, $width: 100%, $height: 100%, $url: #000, $position: center, $bg-size: cover) {
+  float: $float;
+  width: $width;
+  height: $height;
+  background: $url no-repeat center $position;
+  background-size: $bg-size;
+}
+
+@mixin titulo($float:left, $width: 100%, $size: 18, $orientacao: left, $lineheight: 1.5,  $color: #000, $texttransform: normal, $fonte: 'Lato') {
+  float: $float;
+  width: $width;
+
+  @include fontsize($size);
+  text-align: $orientacao;
+  line-height: $lineheight;
+  color: $color;
+  text-transform: $texttransform;
+  @include fonte($fonte);
+}
+
+@mixin transform($valor) {
+  transform: $valor;
+  -webkit-transform: $valor;
+  -moz-transform: $valor;
+  -ms-transform: $valor;
+  -o-transform: $valor;
+}
+
+@mixin transition($valor: 0.3s) {
+  transition: $valor;
+  -webkit-transition: $valor;
+  -moz-transition: $valor;
+  -ms-transition: $valor;
+  -o-transition: $valor;
+}
+
+@mixin skew($valor1: -15deg, $valor2: 0deg) {
+  transform: skew($valor1, $valor2);
+  -webkit-transform: skew($valor1, $valor2);
+  -moz-transform: skew($valor1, $valor2);
+  -ms-transform: skew($valor1, $valor2);
+  -o-transform: skew($valor1, $valor2);
+}
+
+@mixin box-shadow($valor1, $valor2, $valor3, $fundo) {
+  box-shadow: $valor1 $valor2 $valor3 $fundo;
+  -webkit-box-shadow: $valor1 $valor2 $valor3 $fundo;
+  -moz-box-shadow: $valor1 $valor2 $valor3 $fundo;
+}
+
+@mixin radius($valor1: 4px) {
+  border-radius: $valor1;
+  -webkit-border-radius: $valor1;
+  -moz-border-radius: $valor1;
+}
+
+@mixin radius-top-left($valor1: 4px) {
+  border-top-left-radius: $valor1;
+  -webkit-border-top-left-radius: $valor1;
+  -moz-border-top-left-radius: $valor1;
+}
+
+@mixin radius-bottom-left($valor1: 4px) {
+  border-bottom-left-radius: $valor1;
+  -webkit-border-bottom-left-radius: $valor1;
+  -moz-border-bottom-left-radius: $valor1;
+}
+
+@mixin radius-top-right($valor1: 4px) {
+  border-top-right-radius: $valor1;
+  -webkit-border-top-right-radius: $valor1;
+  -moz-border-top-right-radius: $valor1;
+}
+
+@mixin radius-bottom-right($valor1: 4px) {
+  border-bottom-right-radius: $valor1;
+  -webkit-border-bottom-right-radius: $valor1;
+  -moz-border-bottom-right-radius: $valor1;
+}
+
+@mixin box-sizing() {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+@mixin display-flex($wrap: wrap, $alignItems: center, $justifyContent: center, $direction: row, $alignContent: center) {
+  display: flex;
+  flex-wrap: $wrap;
+  -webkit-align-items: $alignItems;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+  -webkit-justify-content: $justifyContent;
+  flex-direction: $direction;
+  -webkit-flex-direction: $direction;
+  align-content: $alignContent;
+}
+
+@mixin placeholder($cor: #000) {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $cor;
+  }
+
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $cor;
+  }
+
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $cor;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $cor;
+  }
+}
+
+@mixin grayscale($valor1) {
+  -webkit-filter: grayscale($valor1);
+  -moz-filter: grayscale($valor1);
+  -ms-filter: grayscale($valor1);
+  -o-filter: grayscale($valor1);
+  filter: grayscale($valor1);
+}
+
+.clearfix:after, .clearfix:before {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0
+}
+
+.clearfix:after {
+  clear: both
+}
+
+.clearfix {
+  zoom: 1
+}
